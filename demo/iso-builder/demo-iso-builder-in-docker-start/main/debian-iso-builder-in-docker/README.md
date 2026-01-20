@@ -25,9 +25,6 @@ Example:
 	$ make
 	$ make help
 
-	$ make box-build
-	$ make box-run
-
 	$ make master-build
 
 	$ make debian-iso-builder-template
@@ -42,13 +39,7 @@ Example:
 
 ## Steps / Build
 
-> run to build docker-image
-
-``` sh
-make box-build
-```
-
-> then run to build iso-file in docker
+> run to build iso-file in docker
 
 ``` sh
 make master-build
