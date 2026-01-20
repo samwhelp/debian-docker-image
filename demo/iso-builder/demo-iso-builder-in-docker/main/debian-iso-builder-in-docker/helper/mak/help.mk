@@ -12,7 +12,8 @@ help:
 	@echo '	$$ make box-run'
 	@echo
 	@echo '	$$ make master-build'
-	@echo '	$$ make master-debian-iso-builder-template'
-	@echo '	$$ make master-debian-iso-builder-respin-xfce'
+	@echo
+	@echo '	$$ make debian-iso-builder-template'
+	@echo '	$$ make debian-iso-builder-respin-xfce'
 	@echo
 .PHONY: help
