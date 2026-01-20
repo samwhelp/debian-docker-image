@@ -1,22 +1,20 @@
 
-
-REF_MAKEFILE_FILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
-REF_BASE_DIR_PATH := $(abspath $(dir $(REF_MAKEFILE_FILE_PATH)))
-REF_PLAN_DIR_PATH := $(REF_BASE_DIR_PATH)
-REF_MAIN_HELPER_DIR_PATH := $(REF_PLAN_DIR_PATH)/helper
-REF_MAIN_DIR_PATH := $(REF_MAIN_HELPER_DIR_PATH)
-REF_MAIN_BIN_DIR_PATH := $(REF_MAIN_DIR_PATH)/bin
-REF_MAIN_MAK_DIR_PATH := $(REF_MAIN_DIR_PATH)/mak
-
-PATH := $(REF_MAIN_BIN_DIR_PATH):$(PATH)
-
-
-
-
 default: help
 .PHONY: default
 
+help:
+	@echo 'Usage:'
+	@echo '	$$ make [action]'
+	@echo
+	@echo 'Example:'
+	@echo '	$$ make'
+	@echo '	$$ make help'
+	@echo
+	@echo '	$$ make master-build'
+	@echo
+.PHONY: help
 
 
-
-include $(REF_MAIN_MAK_DIR_PATH)/*.mk
+master-build:
+	./master-build.sh
+.PHONY: master-build
