@@ -90,11 +90,11 @@ mod_build_prepare_dir () {
 
 mod_build_prepare_package () {
 
-	sudo apt-get update
+	apt-get update
 
-	sudo apt-get install debootstrap -y
+	apt-get install systemctl debootstrap -y
 
-	sudo apt-get install make git wget curl -y
+	apt-get install make git wget curl -y
 
 }
 
@@ -157,9 +157,9 @@ mod_build_copy_iso_file_to_port_dir () {
 	echo "##"
 	echo
 
-	sudo mkdir -p "${REF_PORT_DIR_PATH}"
+	mkdir -p "${REF_PORT_DIR_PATH}"
 
-	sudo cp -rfT "${REF_SRC_DIST_DIR_PATH}" "${REF_DES_DIST_DIR_PATH}"
+	cp -rfT "${REF_SRC_DIST_DIR_PATH}" "${REF_DES_DIST_DIR_PATH}"
 
 	echo
 	echo "##"
