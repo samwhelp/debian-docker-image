@@ -48,7 +48,7 @@ make master-build
 > or run to build iso-file in docker
 
 ``` sh
-make master-debian-iso-builder-respin-xfce
+make debian-iso-builder-respin-xfce
 ```
 
 > check port dir
