@@ -61,5 +61,5 @@ rm -rf "${REF_BUILD_DIR_PATH}"
 mkdir -p "${REF_PORT_DIR_PATH}"
 
 ## work for debootstrap in docker (--privileged)
-#podman run -it --rm --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -v "${REF_PLAN_DIR_PATH}/src:/opt/prj/src" -w "/opt/prj/src" --name "debian-iso-factory-13-run" "debian-iso-factory-13" "${REF_TARGET_NAME}"
-podman run -it --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -v "${REF_PLAN_DIR_PATH}/src:/opt/prj/src" -w "/opt/prj/src" --name "debian-iso-factory-13-run" "debian-iso-factory-13" "${REF_TARGET_NAME}"
+#podman run -it --rm --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -w "/opt/prj/src" --name "debian-iso-factory-13-run" "debian-iso-factory-13" "/opt/prj/src/build.sh" "${REF_TARGET_NAME}"
+podman run -it --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -w "/opt/prj/src" --name "debian-iso-factory-13-run" "debian-iso-factory-13" "/opt/prj/src/build.sh" "${REF_TARGET_NAME}"
